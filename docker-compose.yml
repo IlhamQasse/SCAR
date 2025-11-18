@@ -1,0 +1,7 @@
+version: "3"
+services:
+    audit-report-crawler:
+        build: .
+        image: audit-report-crawler:latest
+        volumes:
+            - ./data:/app/data
