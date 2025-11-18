@@ -16,6 +16,7 @@
 - Note:
   - Before having analyses, we should have projects and repos data crawled.
   - The "languages" data records only the file extensions referenced in the project. Therefore, the presence of ".js" does not necessarily indicate that the project was developed using JavaScript; it simply means that files with the ".js" extension were detected.
+
 ## Execution
 ### Command line arguements
   - platfrom (--platfrom, -p)
@@ -109,6 +110,7 @@ python analyze.py -p all
 ## Statistics
 ### Data Storage
 - No storage. Just output from **statistics.py**
+
 ### Projects
 - Descirption
   - The numbers of auditted projects of each company.
@@ -116,12 +118,13 @@ python analyze.py -p all
     - Github: Reports that are presented in a github repo
     - Pdf: Reports that are presented in pdf.
 - Analysis
-  |              | Total | Wesite | Github Repo | Pdf |
-  | ------------ | ----- | ------ | ----------- | --- |
-  | Quantstamp   | 228   | 82     | 0           | 146 |
-  | Consensys    | 136   | 115    | 20          | 1   |
-  | Openzeppelin | 222   | 222    | 0           | 0   |
-  | Code4rena    | 287   | 287    | 0           | 0   |
+
+|              | Total | Wesite | Github Repo | Pdf |
+| ------------ | ----- | ------ | ----------- | --- |
+| Quantstamp   | 360   | 211    | 0           | 149 |
+| Consensys    | 158   | 137    | 20          | 1   |
+| Openzeppelin | 225   | 225    | 0           | 0   |
+| Code4rena    | 386   | 386    | 0           | 0   |
 
 ### Links
 - Descirption
@@ -131,45 +134,47 @@ python analyze.py -p all
     - Github_broken: Github links which are broken.
     - Pdf: Links to pdf files.
 - Analysis
-  |              | Total | Github | Github_issue | Github_broken | Pdf |
-  | ------------ | ----- | ------ | ------------ | ------------- | --- |
-  | Quantstamp   | 3809  | 385    | 3            | 0             | 11  |
-  | Consensys    | 2524  | 1341   | 211          | 0             | 62  |
-  | Openzeppelin | 9323  | 7250   | 21           | 0             | 0   |
-  | Code4rena    | 73386 | 48355  | 30834        | 0             | 38  |
+
+|              | Total  | Github | Github_issue | Github_broken | Pdf |
+| ------------ | ------ | ------ | ------------ | ------------- | --- |
+| Quantstamp   | 15611  | 1632   | 13           | 0             | 46  |
+| Consensys    | 3021   | 1631   | 214          | 0             | 62  |
+| Openzeppelin | 34597  | 27624  | 60           | 0             | 20  |
+| Code4rena    | 101113 | 64943  | 40276        | 0             | 46  |
 
 ### Languages
 - Description
   - The numbers for each language on each company represent how frequent they are mentioned in the reports.
 - Analysis
-  
-  |              | Solidity | Circom | Go  | Typescript | Rust | C    | C++ | Vyper | Javascript | Cadence | Python | Kotlin | Java | Scilla | TOML |
-  | ------------ | -------- | ------ | --- | ---------- | ---- | :--- | --- | ----- | ---------- | ------- | ------ | ------ | ---- | ------ | ---- |
-  | Quantstamp   | 13813    | 103    | 2   | 952        | 0    | 0    | 2   | 0     | 376        | 2       | 32     | 0      | 0    | 0      | 6    |
-  | Consensys    | 6127     | 0      | 215 | 461        | 0    | 1    | 0   | 22    | 193        | 0       | 33     | 0      | 0    | 0      | 0    |
-  | Openzeppelin | 14452    | 0      | 183 | 224        | 376  | 0    | 0   | 0     | 4          | 0       | 0      | 0      | 0    | 0      | 3    |
-  | Code4rena    | 78512    | 0      | 27  | 262        | 690  | 1    | 6   | 83    | 147        | 0       | 33     | 0      | 0    | 0      | 29   |
+
+|              | Solidity | Circom | Go  | Typescript | Rust | C | C++ | Vyper | Javascript | Cadence | Python | Kotlin | Java | Scilla | TOML |
+| ------------ | -------- | ------ | --- | ---------- | ---- | - | --- | ----- | ---------- | ------- | ------ | ------ | ---- | ------ | ---- |
+| Quantstamp   | 42973    | 200    | 794 | 5409       | 2384 | 0 | 6   | 43    | 3339       | 114     | 84     | 0      | 0    | 0      | 14   |
+| Consensys    | 7375     | 0      | 215 | 679        | 0    | 1 | 0   | 22    | 233        | 0       | 33     | 0      | 0    | 0      | 0    |
+| Openzeppelin | 52809    | 228    | 362 | 329        | 1341 | 0 | 0   | 32    | 98         | 0       | 22     | 0      | 0    | 0      | 3    |
+| Code4rena    | 94541    | 0      | 1991| 289        | 1958 | 1 | 6   | 83    | 180        | 3       | 49     | 0      | 0    | 0      | 41   |
 
 ### Severity Count
 - Description
   - The number of issues in the reports for each company, classified by severity as defined by each platform.
 - Analysis
-  |              | Severity              | Count |
-  | ------------ | --------------------- | ----- |
-  | Quantstamp   | high_risk             | 134   |
-  |              | medium_risk           | 232   |
-  |              | low_risk              | 579   |
-  |              | informational         | 425   |
-  |              | undetermined          | 98    |
-  | Consensys    | critical_risk         | 80    |
-  |              | major_risk            | 208   |
-  |              | medium_risk           | 342   |
-  |              | minor_risk            | 418   |
-  | Openzeppelin | critical_risk         | 18    |
-  |              | high_risk             | 47    |
-  |              | medium_risk           | 150   |
-  |              | low_risk              | 346   |
-  | Code4rena    | high_risk             | 840   |
-  |              | medium_risk           | 2005  |
-  |              | low_risk              | 332   |
-  |              | low_risk_non_critical | 2176  |
+
+|              | Severity              | Count |
+| ------------ | --------------------- | ----- |
+| Quantstamp   | high_risk             | 366   |
+|              | medium_risk           | 726   |
+|              | low_risk              | 1643  |
+|              | informational         | 1366  |
+|              | undetermined          | 266   |
+| Consensys    | critical_risk         | 92    |
+|              | major_risk            | 243   |
+|              | medium_risk           | 415   |
+|              | minor_risk            | 545   |
+| Openzeppelin | critical_risk         | 121   |
+|              | high_risk             | 215   |
+|              | medium_risk           | 591   |
+|              | low_risk              | 1386  |
+| Code4rena    | high_risk             | 1054  |
+|              | medium_risk           | 2560  |
+|              | low_risk              | 331   |
+|              | low_risk_non_critical | 3035  |
