@@ -1,6 +1,6 @@
 # Audit Report Crawlers
 
-> This repository accompanies the paper **“SCAR: Mining and Structuring Smart Contract”**, submitted to the **IEEE SANER 2026 Tool Track**.
+> This repository accompanies the paper **“SCAR: Mining and Structuring Smart Contract”**, submitted to the **ACM FSE 2026 Tool Demonstrations Track**.
 
 **Authors (for citation):**  
 Ilham Qasse<sup>*</sup>, Po‑Yu Tseng<sup>†</sup>, Mohammad Hamdaqa<sup>‡</sup>, and Gísli Hjálmtýsson<sup>*</sup>  
